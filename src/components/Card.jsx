@@ -1,3 +1,5 @@
+import '../assets/Card.css'
+
 export function Card ({ image, name, onClick }) {
   return (
     <div className='card h-100' onClick={onClick}>
