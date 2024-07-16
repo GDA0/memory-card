@@ -1,4 +1,4 @@
-export async function fetchCharacters (count = 12) {
+export async function fetchCharacters (count = 8) {
   const ids = Array.from({ length: count }, (_, i) => i + 1).join(',')
   const response = await fetch(
     `https://rickandmortyapi.com/api/character/${ids}`
