@@ -1,11 +1,15 @@
 import { useState, useEffect } from 'react'
 import { Card } from './Card'
 
-export function Board ({ characters }) {
+export function Board ({
+  characters,
+  score,
+  setScore,
+  highScore,
+  setHighScore
+}) {
   const [shuffledCharacters, setShuffledCharacters] = useState([])
   const [clickedCharacterIds, setClickedCharacterIds] = useState([])
-  const [score, setScore] = useState(0)
-  const [highScore, setHighScore] = useState(0)
 
   useEffect(() => {
     setShuffledCharacters(shuffle(characters))

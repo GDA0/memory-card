@@ -8,6 +8,8 @@ import { fetchCharacters } from './fetch-characters'
 
 export default function App () {
   const [characters, setCharacters] = useState([])
+  const [score, setScore] = useState(0)
+  const [highScore, setHighScore] = useState(0)
 
   useEffect(() => {
     async function getCharacters () {
@@ -19,8 +21,14 @@ export default function App () {
 
   return (
     <>
-      <Header />
-      <Main characters={characters} />
+      <Header score={score} highScore={highScore} />
+      <Main
+        characters={characters}
+        score={score}
+        setScore={setScore}
+        highScore={highScore}
+        setHighScore={setHighScore}
+      />
       <Footer />
     </>
   )
